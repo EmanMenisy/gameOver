@@ -1,0 +1,30 @@
+section{
+    background-color: #000000;
+    height: 100%;
+    padding: 25px;
+}
+
+img{
+    animation: jump 1s infinite alternate;
+    transition: 2s;
+}
+
+@keyframes jump{
+    from{ transform: translateY(0px);}
+    to{ transform: translateY(-10px);}
+}
+
+
+form label{
+    color: white;
+}
+
+.btn-primary{
+    width: 100px;
+    background-color: #0dcaf0;
+    border-radius: 20px;
+    border: none !important;
+    border-left: 9px solid white !important;
+    outline: none !important;
+    border-right: 9px solid white !important;
+}

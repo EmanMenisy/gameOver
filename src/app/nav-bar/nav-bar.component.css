@@ -1,0 +1,89 @@
+nav{
+    background-color:#212529 ;
+    position: fixed ;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999999999;
+}
+
+.container-fluid{
+    width: 90%;
+}
+
+nav a{
+    color: #ffffff;
+}
+.fa-gamepad{
+    color: #0dcaf0;
+    font-size: 30px;
+    margin-right: 10px;
+}
+.navLogo{
+    display: flex;
+    align-items: center;
+}
+
+.navLogo h6{
+    font-size: 16px;
+    margin-top: 6px;
+}
+.navLogo h6 span{
+    color: #0dcaf0 !important;
+}
+
+.dropdown-menu{
+    border-radius: 25px 10px;
+    background-color: rgb(16, 16, 18 , .9);
+    margin-top: 10px !important;
+    width: 400px;
+    padding: 30px;
+}
+.dropdown-item{
+    background-color: rgb(159, 159, 160 , .8);
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    font-weight:500;
+}
+
+.dropdown-item:hover{
+    background-color:white;
+    color:rgb(106, 31, 171);
+}
+
+.dropdown-item::before{
+    content: '';
+    background-color: rgb(106, 31, 171) ;
+    width: 100%;
+    height: 3px;
+    left: -100%;
+    bottom: 0;
+    position: absolute;
+    transition: all 1s;
+}
+
+.dropdown-item:hover.dropdown-item::before{
+    left: 0;
+}
+
+.username{
+    color: #0dcaf0 !important;
+    font-weight: 500;
+}
+
+.btn-danger{
+    border-radius: 20px;
+    border: none;
+    border-left: 5px solid white !important;
+    border-right: 5px solid white !important;
+    width: fit-content;
+    padding: 5px 10px;
+    background-color: red;
+}
+
+
+
+
+

@@ -1,0 +1,142 @@
+section{
+    background-color: black;
+    position: relative;
+    z-index: 11111;
+    margin-top: 50px;
+}
+.container-fluid{
+    position: relative;
+    z-index: 1;
+}
+.container-fluid::before{
+    content: "";
+    background-color: rgb(0, 0, 0, .8);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+
+}
+.details-title{
+  padding: 10px;
+  position: relative;
+  border: 3px solid #e3e3e2;
+  width: fit-content;
+  margin: auto;
+  border-radius: 20px 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.details-title::before{
+ content: " ";
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ left: -100%;
+ top: 0;
+ background-color: #74afa4;
+ border-radius: 18px 0;
+ z-index: -1;
+ transition: all 1s;
+}
+.details-title:hover:before{
+    left: 0;
+}
+
+.details-title h3{
+    text-align: center;
+    color: #e3e3e2;
+    font-size: 22px;
+    font-weight: 300;
+}
+
+.game-description h3{
+    font-weight: 300;
+    font-size:20;
+}
+.game-description p{
+    color: #89848b;
+}
+
+
+.game-img img{
+    border-radius: 20px 0;
+    animation: opacity 3s alternate infinite linear ;
+    transition: all 1s;
+}
+
+@keyframes opacity {
+    0%{
+       opacity: .3;
+    }
+
+    50%{
+         opacity: .5;
+    }
+
+    100%{
+       opacity: 1;
+    }
+}
+.details-button{
+    text-align: center;
+}
+.details-button button{
+    margin: 10px 10px;
+    border-radius: 5px;
+    padding: 5px;
+    color: aliceblue;
+
+}
+
+.posterImg img{
+    border-radius: 10px;
+    animation: jump 2s  infinite alternate linear;
+}
+
+@keyframes jump {
+    0%{
+         transform: rotateY('0px');
+    }
+
+    100%{
+      transform: translateY(-10px);
+    }
+
+}
+
+.required{
+    background-color: #333333;
+    border: 2px solid #f2f2f2;
+    border-radius: 20px 0;
+    padding-top: 5px ;
+    text-align: center;
+    transition: all 1s ;
+    height: 100px;
+    overflow: hidden;
+}
+
+.required:hover{
+    transform: translateY(-10px);
+}
+
+.required h4{
+    font-size: 26px;
+    font-weight: 300;
+    color: aliceblue;
+}
+
+.required p{
+    font-size: 16px;
+    font-weight: 300;
+    color: #89848b;
+}
+
+.btn-group button{
+    width: 100px;
+}
+
+

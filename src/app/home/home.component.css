@@ -1,0 +1,190 @@
+
+section{
+    background-color: #000000;
+    position: relative;
+    z-index: 1;
+}
+
+.headerspancol{
+    color: var(--cyantextcolor) !important;
+}
+.headerimg{
+    background: url(/assets/images/3.0fddd1fbe0a5e0a0af93.png) , rgb(28, 30, 34) ;
+    background-size: cover;
+    height: 300px;
+}
+
+.headerimg h1{
+    color: white;
+    font-weight: 300 !important;
+}
+
+.headerimg h6 {
+    font-weight: 100;
+}
+
+.headerspancol{
+    color: var(--cyantextcolor) !important;
+}
+
+.fa-gamepad{
+    font-size: 46px;
+    color: var(--cyantextcolor);
+}
+.Recommendations{
+    width: 90%;
+}
+.Recommendations h4{
+     color: white;
+     padding-left: 12px;
+     width: 90%;
+}
+
+.recommendation-box{
+    border-radius: 8px;
+    overflow: auto;
+    position: relative;
+
+}
+
+.recommendation-img img{
+    border-radius: 8px !important;
+}
+
+.recommendation-layer{
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition:all 1s;
+}
+
+.recommendation-layer h5{
+    color: var(--cyantextcolor);
+}
+
+.recommendation-layer h6{
+    color: white;
+}
+
+.recommendation-box:hover .recommendation-layer{
+    left: 0;
+    cursor: pointer;
+}
+.mostPlayGame-box{
+    position: relative;
+    background-color: #212529;
+    height: 230px;
+    border-radius: 18px 2px;
+    padding: 15px;
+    transition: all 1s;
+}
+
+.mostPlayGame-box:hover{
+    transform: scale(1.04) translateY(-5px);
+    filter: grayscale(100%);
+}
+
+.mostPlayGame-box img {
+    position: absolute;
+    top: -20px;
+    right: -7px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 6px solid black;
+
+}
+
+.mostPlayGame-box p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #aba69c;
+}
+
+.mostPlayGame-box h6 , .mostPlayGame-box h5{
+    padding: 7px 0;
+}
+
+.mostPlayGame-box h5 , .mostPlayGame-box h6{
+    color: #1849b0;
+    font-weight: 400;
+}
+
+.mostPlayGame-box h6 span {
+    color: var(--cyantextcolor);
+    padding-left:5px;
+}
+
+.static-section{
+    background-color: #212529 ;
+    display: flex;
+    align-items: center;
+    border-radius: 20px 0;
+    padding: 15px;
+}
+
+.static-info{
+    color: #dbd7cf;
+}
+
+
+.static-info p {
+    font-weight: 300;
+    color: #bfbab0 ;
+}
+
+.static-info h6{
+    position: relative;
+    padding: 10px;
+    width: fit-content;
+    transition: all 1s;
+    z-index: 9999;
+}
+
+.static-info h6::before{
+    content: ' ';
+    background-color: #4799e9;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    transition: all 1s;
+    z-index: -1;
+}
+
+.static-info h6:hover{
+    color: #dbd7cf;
+}
+
+.static-info h6:hover::before{
+    width: 100%;
+    border-radius: 0 15px 0 0 ;
+}
+
+.footer{
+    background-color: #212529 ;
+    color:  #dbd7cf;
+    border-radius: 20px 20px 0 0 ;
+    height:60px ;
+}
+
+@media(max-width:1200px){
+
+    .mostPlayGame-box{
+       height: 300px;
+    }
+    .mostPlayGame-box h5{
+      font-size: 18px;
+    }
+}
+
+

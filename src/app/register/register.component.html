@@ -1,0 +1,50 @@
+<section>
+  <div class="container-fluid">
+    <div class="row p-5">
+      <div class="col-md-6 text-center" >
+      <img src="assets/images/5272450-removebg.5cba9d0cfb4a12850de8.png" alt="" class="w-100">
+     </div>
+       <div class="col-md-6 mt-5">
+        <h2 class="text-center text-white">Rigester Form </h2>
+        <form [formGroup]="registarionForm" (ngSubmit)="registarionFormSubmit()">
+          <div class="mb-3">
+            <label for="First Name" class="form-label"> First Name </label>
+            <input type="text" class="form-control" id="First Name" formControlName="first_name">
+            <div *ngIf="registarionForm.controls['first_name'].invalid && registarionForm.controls['first_name'].touched" class="text-danger py-2 my-2">
+              <p  *ngIf="registarionForm.controls['first_name'].errors?.['minlength']"> first name min length 3 char</p>
+              <p  *ngIf="registarionForm.controls['first_name'].errors?.['required']"> first name is required </p>
+              <p  *ngIf="registarionForm.controls['first_name'].errors?.['maxlength']"> first name max length 7 char</p>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="Last Name" class="form-label"> Last Name </label>
+            <input type="text" class="form-control" id="Last Name" formControlName="last_name">
+            <div *ngIf="registarionForm.controls['last_name'].invalid && registarionForm.controls['last_name'].touched" class="text-danger  py-2 my-2" >
+              <p   *ngIf="registarionForm.controls['last_name'].errors?.['minlength']"> Last name min length 3 char</p>
+              <p   *ngIf="registarionForm.controls['last_name'].errors?.['required']"> Last name is required </p>
+              <p   *ngIf="registarionForm.controls['last_name'].errors?.['maxlength']"> Last name max length 7 char</p>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="Email" class="form-label"> Email</label>
+            <input type="Email" class="form-control" id="Email" formControlName="email">
+            <div *ngIf="registarionForm.controls['email'].invalid && registarionForm.controls['email'].touched" class="text-danger  py-2 my-2" >
+              <p  *ngIf="registarionForm.controls['email'].errors?.['required']"> email name is required </p>
+              <p  *ngIf="registarionForm.controls['email'].errors?.['email']"> email not valid </p>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="Password" formControlName="password">
+            <div *ngIf="registarionForm.controls['password'].invalid && registarionForm.controls['password'].touched" class="text-danger py-2 my-2" >
+              <p *ngIf="registarionForm.controls['password'].errors?.['required']"> password is required</p>
+              <p *ngIf="registarionForm.controls['password'].errors?.['pattern']"> password should start with char and include 3 numb</p>
+            </div>
+
+          </div>
+          <button [disabled]="registarionForm.invalid" type="submit" class="btn btn-primary"> Submit </button>
+        </form>
+       </div>
+    </div>
+</div>
+</section>

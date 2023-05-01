@@ -1,0 +1,26 @@
+@import Url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;700;800&display=swap');
+
+*{
+ font-family: 'Montserrat Alternates', sans-serif;
+}
+
+:root{
+    --cyantextcolor: #0dc8ed ;
+}
+
+/* .ngx-toastr{
+    position: fixed;
+    z-index: 99999;
+    top: 20px;
+    right: 20px;
+    background-color: green;
+ 
+} */
+
+/* .toast-container{
+    z-index: 99999;
+    position: fixed;
+} */
+.paper-toast {
+    z-index: 222;
+    }
